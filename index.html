@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Frontend Developer Portfolio - Building innovative and user-friendly digital solutions." />
+        <title>Frontend Developer Portfolio</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+
+    <body>
+        <div id="cursor"></div>
+        <div class="cursor-follower" id="follower"></div>
+
+        <div class="background-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <!-- ================= NAVBAR ================= -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+
+                    <div class="logo">
+                        <a href="#home">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+
+                        <li><a href="#home" class="nav-item active">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+
+                        <li><a href="#about" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+
+                        <li><a href="#portfolio" class="nav-item">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+
+                        <li><a href="#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <button class="nav-cta" id="openModal">
+                        Let’s Connect
+                    </button>
+
+                    <!-- Hamburger -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <button class="close-btn" id="closeModal">&times;</button>
+
+                <h2>Internship Inquiry</h2>
+                <p class="modal-sub">
+                    Interested in offering me an internship opportunity? Let’s connect.
+                </p>
+
+                <form id="internshipForm">
+                    <div class="input-group">
+                        <input type="text" id="modal-name" name="name" placeholder=" " required autocomplete="name">
+                        <label for="modal-name">Your Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="modal-email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="modal-email">Your Email</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="modal-company" name="company" placeholder=" " autocomplete="organization">
+                        <label for="modal-company">Company Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="modal-message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="modal-message">Message</label>
+                    </div>
+
+                    <!-- modal -->
+                    <input type="hidden" name="_subject" value="New Internship Inquiry">
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <p id="modalStatus" style="margin-top:15px; font-size:14px;"></p>
+            </div>
+        </div>
+
+        <!-- ================= HERO ================= -->
+        <main id="home" class="container">
+
+            <section class="content">
+
+                <div class="badge">
+                    <i data-lucide="sparkles"></i>
+                    <span>Ready to Innovate</span>
+                </div>
+
+                <!-- PRIMARY TITLE -->
+                <h1>
+                    > Welcome_ <span class="highlight">Marc Canlas</span>
+                </h1>
+
+                <!-- ROLE -->
+                <h2 class="sub-headline">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </h2>
+
+                <!-- DESCRIPTION -->
+                <p class="description">
+                    I’m a Frontend Developer with a strong eye for UI design, building clean, responsive, and user-centered web experiences. 
+                    I transform ideas into functional digital interfaces using modern web technologies.
+                </p>
+
+                <!-- TAGS -->
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Angular</span>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary">
+                        Projects <i data-lucide="external-link"></i>
+                    </a>
+                    <a href="https://github.com/TheCanlasArchive" class="btn btn-secondary">
+                        Github <i data-lucide="github"></i>
+                    </a>
+
+            </section>
+
+            <section class="illustration">
+                <div class="art-container">
+                    
+                    <div class="tv-screen">
+                        <img id="project-preview" src="project1.jpg" alt="Project Preview">
+
+                        <div class="project-overlay">
+                            <h3 id="project-title">Project One</h3>
+                            <a id="project-link" href="#" target="_blank">View Project →</a>
+                        </div>
+
+                        <div class="screen-glow"></div>
+                    </div>
+
+                    <div class="floating-icon html"><span>HTML</span></div>
+                    <div class="floating-icon css"><span>CSS</span></div>
+                    <div class="floating-icon js"><span>JS</span></div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="about-modern">
+            <div class="bg-decoration">
+                <div class="glow-sphere"></div>
+            </div>
+            
+            <div class="about-wrapper">
+                <div class="about-header">
+                    <div class="title-area">
+                        <h2 class="display-title">Turning Designs <br>into <span class="gradient-text">Reality</span></h2>
+                    </div>
+                    
+                    <div class="about-actions-alt">
+                        <a href="img/assets/marc_canlas_resume.pdf" class="btn-modern primary" download>
+                            Get Resume <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <a href="profile.html" class="btn-modern secondary">
+                            View Lab
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-main-grid">
+                    <div class="identity-visual">
+                        <div class="image-stack">
+                            <div class="stack-bg"></div>
+                            <div class="profile-container-new">
+                                <img src="img/assets/profile.png" alt="Marc Canlas" class="main-avatar">
+                                <div class="floating-years">
+                                    <strong>3</strong>
+                                    <span>Years Exp</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-content">
+                        <div class="terminal-card-new">
+                            <div class="t-top">
+                                <div class="t-controls"><span></span><span></span><span></span></div>
+                                <span class="t-path">~/core/developer.json</span>
+                            </div>
+                            <div class="t-body">
+                                <pre><code><span class="k">const</span> <span class="v">marcCanlas</span> = {
+        Role: <span class="s">"Frontend Developer"</span>,
+        Skills: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>, <span class="s">"PHP"</span>, <span class="s">"Vue.js"</span>, <span class="s">"Angular"</span>],
+        Projects: [<span class="s">"Aurumelle_Pastries"</span>, <span class="s">"Bossrich"</span>, <span class="s">"PanlasaTrip"</span>]
+        };</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="bio-text-block">
+                            <p>I love turning ideas into interactive and engaging web experiences. I focus on clean, organized code and thoughtful design, always learning new ways to make web applications both useful and enjoyable for users.</p>
+                        </div>
+
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <span class="s-val">06</span>
+                                <span class="s-lab">Total Projects</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="s-val">03</span>
+                                <span class="s-lab">Certifications</span>
+                            </div>
+                            <div class="stat-box branding-box">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJECT ================= -->
+        <section class="portfolio-grid" id="portfolio">
+            <div class="portfolio-container">
+                <header class="portfolio-header">
+                    <h2 class="section-title">Featured <em>Works</em></h2>
+                </header>
+
+                <div class="project-showcase">
+                    <div class="project-nav">
+                        
+                        <div class="project-batch active" id="batch-1">
+                            <div class="project-card active" data-img="img-1">
+                                <div class="card-content">
+                                    <span class="p-index">01</span>
+                                    <div class="p-info">
+                                        <h3><a href="projects/project-aurumelle.html" class="p-titles">Aurumelle_Pastries</a></h3>
+                                        <p>Fullstack Development</p>
+                                        <p class="p-tech">PHP, SQL</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card" data-img="img-2">
+                                <div class="card-content">
+                                    <span class="p-index">02</span>
+                                    <div class="p-info">
+                                        <h3><a href="projects/project-bossrich.html" class="p-titles">Bossrich</a></h3>
+                                        <p>Frontend Developer & UI/ UX Designer</p>
+                                        <p class="p-tech">Wordpress, SEO</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card" data-img="img-3">
+                                <div class="card-content">
+                                    <span class="p-index">03</span>
+                                    <div class="p-info">
+                                        <h3><a href="projects/project-singku.html" class="p-titles">Singku Inspired</a></h3>
+                                        <p>Frontend Developer</p>
+                                        <p class="p-tech">HTML, CSS, JS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-batch" id="batch-2">
+                            <div class="project-card" data-img="img-4">
+                                <div class="card-content">
+                                    <span class="p-index">04</span>
+                                    <div class="p-info">
+                                        <h3><a href="projects/project-earthhaven.html" class="p-titles">EarthHaven Organics</a></h3>
+                                        <p>Frontend Developer</p>
+                                        <p class="p-tech">Angular, Bootstrap</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card" data-img="img-5">
+                                <div class="card-content">
+                                    <span class="p-index">05</span>
+                                    <div class="p-info">
+                                        <h3><a href="projects/project-panlasa.html" class="p-titles">PanlasaTrip</a></h3>
+                                        <p>Frontend Designer</p>
+                                        <p class="p-tech">Wordpress</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="project-card" data-img="img-6">
+                                <div class="card-content">
+                                    <span class="p-index">06</span>
+                                    <div class="p-info">
+                                        <h3><a href="projects/project-payastreet.html" class="p-titles">PayaStreet</a></h3>
+                                        <p>Frontend Developer</p>
+                                        <p class="p-tech">Wordpress</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-visual-container">
+                        <div class="visual-inner">
+                            <img src="img/aurumelle_img/header.png" class="bg-img active" id="img-1" alt="Aurumelle_Pastries">
+                            <img src="img/bossrich_img/bossrich.png" class="bg-img" id="img-2" alt="Bossrich">
+                            <img src="img/singku_img/header.png" class="bg-img" id="img-3" alt="Singku Inspired">
+                            <img src="img/earthhaven_img/earthhaven_organics.png" class="bg-img" id="img-4" alt="EarthHaven Organics">
+                            <img src="img/panlasa_trip/header.png" class="bg-img" id="img-5" alt="Panlasa Trip">
+                            <img src="img/payastreet_img/payastreet.png" class="bg-img" id="img-6" alt="Paya Street">
+                            <div class="overlay-vignette"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-cta nav-controls" style="display: flex; gap: 20px; margin-top: 40px;">
+                    <button class="nav-btn prev-btn" id="prevProj" style="cursor: pointer; background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; display: flex; align-items: center; gap: 10px;">
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" style="transform: rotate(180deg);">
+                            <path d="M1.5 1.5H13.5V13.5M13.5 1.5L1.5 13.5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Prev Batch</span>
+                    </button>
+
+                    <button class="nav-btn next-btn" id="nextProj" style="cursor: pointer; background: transparent; color: white; border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; display: flex; align-items: center; gap: 10px;">
+                        <span>Next Batch</span>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                            <path d="M1.5 1.5H13.5V13.5M13.5 1.5L1.5 13.5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIALS ================= -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h2 class="section-title">Building Together: <span class="highlight">Success Stories</span></h2>
+                </div>
+
+                <div class="wall-viewport">
+                    <div class="marquee-track row-left" id="track1">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc builds clean, functional code. His work on the Paya Street engine shows he can handle the full lifecycle of a web app, from server setup to UI."</p>
+                            <div class="footer">
+                                <div class="avatar">SG</div>
+                                <div class="info"><h4>Samantha Wayne Gonzales</h4><p>Fellow Collaborator</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Effectively customized WordPress to create a structured, content-heavy photography blog. Marc showed a clear understanding of content taxonomy, SEO, and organized media delivery."</p>
+                            <div class="footer">
+                                <div class="avatar">AM</div>
+                                <div class="info"><h4>Aimee Pangan</h4><p>Fellow Team Member</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Expertly handled the CMS architecture to organize a large volume of culinary content. Marc’s implementation of custom taxonomies and SEO-friendly structures makes the platform both easy to manage and easy to find."</p>
+                            <div class="footer">
+                                <div class="avatar">JL</div>
+                                <div class="info"><h4>Joyze Magat</h4><p>Fellow Team Member</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marquee-track row-right" id="track2">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc shows a strong grasp of modern framework logic. His work with Angular goes beyond just visuals; he implements clean component structures and ensures everything is stable with unit testing."</p>
+                            <div class="footer">
+                                <div class="avatar">MT</div>
+                                <div class="info"><h4>Joemar Catipon</h4><p>Project Collaborator</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc is a focused developer who delivers. He understands the technical requirements of an e-commerce site, like order tracking and database management."</p>
+                            <div class="footer">
+                                <div class="avatar">JJ</div>
+                                <div class="info"><h4>James Jethro Dizon</h4><p>Team Member</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"The focus was on a simple, effective shopping experience. Marc implemented a smooth ordering flow and a clean UI that represents the brand perfectly without overcomplicating things."</p>
+                            <div class="footer">
+                                <div class="avatar">GG</div>
+                                <div class="info"><h4>Gab Gaerlan</h4><p>Team Meber</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <p class="sub-title">Connect With Me</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="info-side">
+                        <div class="card email-card">
+                            <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="card-content">
+                                <p class="label">OFFICIAL EMAIL</p>
+                                <p class="value">m4canlas@gmail.com</p>
+                            </div>
+                            <i class="fa-regular fa-copy copy-icon" 
+                                title="Copy Email"
+                                onclick="copyEmail()"></i>
+                        </div>
+
+                        <div class="card location-card">
+                            <div class="icon-box location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="card-content">
+                                <p class="label">BASE LOCATION</p>
+                                <p class="value">Angeles City, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="social-row">
+                            <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="card social-card">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/marcordonez.canlas.906" class="card social-card">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="form-side card">
+                        <div class="window-controls">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+
+                        <h3 class="form-title">Send Message_</h3>
+
+                        <form id="contactFormMain">
+                            <div class="form-input-row">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+
+                            <select name="service" required>
+                                <option value="">Select Service</option>
+                                <option>UI/UX Design</option>
+                                <option>Frontend Development</option>
+                                <option>Landing Page Design</option>
+                                <option>Website Redesign</option>
+                                <option>other</option>
+                            </select>
+
+                            <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+
+                            <button type="submit" class="send-btn">
+                                Send Message <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <p id="formStatus" style="margin-top:15px; font-size:14px;"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                
+                <div class="footer-cta">
+                    <p class="cta-subtitle">WHAT'S NEXT?</p>
+                    <h2 class="cta-title">
+                        Let's build something <br>
+                        <span class="gradient-text">legendary together.</span>
+                    </h2>
+                    <a href="mailto:m4canlas@gmail.com" class="email-link">
+                        m4canlas@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <div class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#portfolio">Project</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://github.com/TheCanlasArchive" class="social-circle"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/marcordonez.canlas.906" class="social-circle"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p class="copyright">© 2026 Marc O. Canlas</p>
+                </div>
+            </div>
+
+            <a href="#home" class="scroll-top" id="scrollTopBtn">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </footer>
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
